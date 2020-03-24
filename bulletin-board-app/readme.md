@@ -8,11 +8,6 @@ This code is for the Docker intro session given at ACM@UC.
 2. Run `node server.js`.
 3. Visit [http://localhost](http://localhost).
 
-## RESTful API
-
-1. **Use Node.js & Express for backend server and router.**
-2. **RESTful requests towards the server to simulate CRUD on *events* model, instead of local hardcoded ones.**
-
 ## Docker
 
 1. To build this app as a Docker image, run `docker built --tag username/image-name .`.

@@ -1,9 +1,8 @@
-FROM node:6.11.5
+FROM node:12
 
 WORKDIR /usr/src/app
-COPY package.json .
-RUN npm install
 COPY . .
+RUN npm install
 
 CMD [ "npm", "start" ]
-
+EXPOSE 80

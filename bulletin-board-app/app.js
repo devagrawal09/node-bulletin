@@ -13,7 +13,6 @@ new Vue({
   methods: {
 
     fetchEvents: function () {
-      var events = [];
       this.$http.get('/api/events')
         .success(function (events) {
           this.$set('events', events);
@@ -29,6 +28,7 @@ new Vue({
         this.$http.post('/api/events', this.event)
           .success(function (res) {
             this.events.push(this.event);
+            this.event = { title: '', detail: '', date: '' };
             console.log('Event added!');
           })
           .error(function (err) {
@@ -41,7 +41,6 @@ new Vue({
       if (confirm('Are you sure you want to delete this event?')) {        
         this.$http.delete('api/events/' + id)
           .success(function (res) {
-            console.log(res);
             var index = this.events.find(x => x.id === id)
             this.events.splice(index, 1);
           })

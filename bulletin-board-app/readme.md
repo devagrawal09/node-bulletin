@@ -1,20 +1,21 @@
-## Vue Events Bulletin Board
+## Node Vue Bulletin Board
 
-This is the code for the Vue.js [tutorial on Scotch.io](https://scotch.io/tutorials/build-a-single-page-time-tracking-app-with-vue-js-introduction). In the tutorial we build a events bulletin board application and cover the basics of [Vue](http://vuejs.org/).
+This code is for the Docker intro session given at ACM@UC.
 
 ## Installation
 
 1. Run `npm install`.
 2. Run `node server.js`.
-3. Visit [http://localhost:8080](http://localhost:8080).
+3. Visit [http://localhost](http://localhost).
 
-## RESTful API (contributed by Jason Lam)
+## RESTful API
 
 1. **Use Node.js & Express for backend server and router.**
 2. **RESTful requests towards the server to simulate CRUD on *events* model, instead of local hardcoded ones.**
-3. Translated into Traditional Chinese.
 
-## RESTful API written in Go 
+## Docker
 
-If you would like to use a backend written in Go, [thewhitetulip](http://github.com/thewhitetulip) has written on. See [the source code](https://github.com/thewhitetulip/go-vue-events).
- 
+1. To build this app as a Docker image, run `docker built --tag username/image-name .`.
+2. To run the image as a Docker container, run `docker run --detach --publish 80:80 --name container-name username/image-name`.
+3. To push the image to Docker Hub, run `docker push username/image-name`.
+4. To pull the image from Docker Hub, run `docker pull username/image-name`.
